@@ -18,7 +18,7 @@ const Sidebar = () => {
   }
 
   return (
-    <aside className="w-2/5 bg-white p-4 rounded-lg shadow-md">
+    <aside className="w-full lg:w-2/5 min-h-[570px] bg-white p-4 rounded-lg shadow-md">
       <div className="flex gap-4">
         <div className="w-1/3 my-2">
           <StyledInput label="Word Limit" placeholder="Ex. 100" isRequired={true} target="wordLimit" />

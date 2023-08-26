@@ -9,7 +9,7 @@ const App = () => {
   return (
     <div className="font-sans bg-gray-100 h-[100vh]">
       <Header />
-      <div className="container mx-auto my-4 flex h-[calc(100%-120px)]">
+      <div className="container mx-auto my-4 flex flex-col lg:flex-row h-[calc(100%-120px)]">
         {isLoading && <Loader />}
         <Sidebar />
         <Home />
