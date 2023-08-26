@@ -1,10 +1,17 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { Header, Loader, Sidebar } from "./components";
 import { EmailContext } from "./hooks/EmailContext";
 import { Home } from "./pages";
 
 const App = () => {
-    const { myStates: {isLoading} } = useContext(EmailContext);
+    const { myStates: {isLoading}, setMyStates } = useContext(EmailContext);
+
+    useEffect(() => {
+        setMyStates(pre => ({ ...pre, isLoading: true}));
+        setTimeout(() => {
+            setMyStates(pre => ({ ...pre, isLoading: false}));
+        }, 2000);
+    }, []);
 
   return (
     <div className="font-sans bg-gray-100 h-[100vh]">
