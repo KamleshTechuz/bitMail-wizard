@@ -13,7 +13,7 @@ const StyledTextArea = ({ label, placeholder, isRequired, target, rows, maxLengt
     <>
       <StyledInputLabel label={label} isRequired={isRequired} />
       <textarea
-          maxLength={maxLength && 70}
+          maxLength={ maxLength ? 70 : 100 }
         rows={rows}
         value={myStates[target] as string}
         onChange={onHandleChange}
