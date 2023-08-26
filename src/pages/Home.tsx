@@ -24,9 +24,9 @@ const Home = () => {
   };
 
   return (
-    <main className="w-3/4 bg-white p-4 ml-4 rounded-lg shadow-md">
+    <main className="w-full lg:w-3/4 min-h-[570px] bg-white p-4 lg:ml-4 my-4 lg:my-0 rounded-lg shadow-md">
       <div className="px-6 py-5 whitespace-pre-line text-gray-400 h-full">
-        <div className="fixed w-[45%]">
+        <div className="w-full">
           <div className="flex items-center">
             <h2 className="text-2xl font-semibold text-[#0dceda]">
               {replaceEnter(activeSubject, '\n', ' ')}
@@ -41,7 +41,7 @@ const Home = () => {
           </div>
             <div className="mt-2 border-t border-gray-300"></div>  
         </div>
-        <div className="mt-[60px] h-[calc(100%-60px)] overflow-y-auto scrollable">
+        <div className="mt-[20px] h-[calc(100%-60px)] overflow-y-auto scrollable">
           {isGenerated ? emailContent : emailContentDummy}
         </div>
       </div>
