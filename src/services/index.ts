@@ -2,7 +2,7 @@ import { defaultPrompt } from "../lib";
 
 const environment = {
   API_URL: "https://api.openai.com/v1/chat/completions",
-  API_KEY: "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",
+  API_KEY: import.meta.env.VITE_API_KEY,
   MODEL: "gpt-3.5-turbo",
   MODEL_PROMPT: "You a bot who can only do chat",
 };
