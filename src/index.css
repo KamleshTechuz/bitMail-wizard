@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.scrollable::-webkit-scrollbar {
+    width: 1px;
+  }
+  
+  .scrollable::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
+  
+  .scrollable::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  .copy_btn {
+    @apply ml-4 w-7 h-7 rounded bg-white/10 shadow-[inset_10px_-50px_94px_0_rgb(199,199,199,0.2)] backdrop-blur flex justify-center items-center cursor-pointer;
+  }
