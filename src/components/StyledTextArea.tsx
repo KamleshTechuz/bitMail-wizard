@@ -20,7 +20,7 @@ const StyledTextArea = ({ label, placeholder, isRequired, target, rows, maxLengt
         id={target}
         name={target}
         placeholder={placeholder}
-        className="w-full my-2 px-4 py-2 resize-none border rounded-md focus:outline-none focus:border-blue-500"
+        className="w-full my-2 px-4 py-2 resize-none border rounded-md focus:outline-none focus:border-[#0dceda]"
       ></textarea>
     </>
   );

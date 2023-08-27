@@ -19,7 +19,7 @@ const StyledInput = ({ label, placeholder, isRequired, target }: any) => {
         id={target}
         name={target}
         placeholder={placeholder}
-        className="w-full my-2 px-4 py-2 border rounded-md focus:outline-none focus:border-blue-500"
+        className="w-full my-2 px-4 py-2 border rounded-md focus:outline-none focus:border-[#0dceda]"
       />
     </>
   );

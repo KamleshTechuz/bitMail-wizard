@@ -17,7 +17,7 @@ const StyledDropdown = ({ listData, label, isRequired, target }: any) => {
         value={myStates[target] as string}
         onChange={onHandleChange}
         name={target}
-        className="w-full my-2 px-4 py-2 border rounded-md bg-white text-gray-800 focus:outline-none focus:border-blue-500"
+        className="w-full my-2 px-4 py-2 border rounded-md bg-white text-gray-800 focus:outline-none focus:border-[#0dceda]"
       >
         {listData.map((opt: any) => (
           <option key={opt.id} value={opt.name}>
