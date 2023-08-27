@@ -16,7 +16,6 @@ const Home = () => {
     setActiveSubject(subject || "BitMail-Wizard");
   }, [subject, emailContent]);
 
-
   const handleCopy = (copyContent: string) => {
     setCopied(true);
     navigator.clipboard.writeText(copyContent);
@@ -24,24 +23,24 @@ const Home = () => {
   };
 
   return (
-    <main className="w-full lg:w-3/4 min-h-[570px] bg-white p-4 lg:ml-4 my-4 lg:my-0 rounded-lg shadow-md">
-      <div className="px-6 py-5 whitespace-pre-line text-gray-400 h-full">
+    <main className="home_main_container">
+      <div className="home_main_subdiv">
         <div className="w-full">
-          <div className="flex items-center">
-            <h2 className="text-2xl font-semibold text-[#0dceda]">
+          <div className="email_subject_container">
+            <h2 className="email_subject">
               {replaceEnter(activeSubject, '\n', ' ')}
             </h2>
             { isGenerated && <div className='copy_btn' onClick={() => handleCopy(emailContent)}>
               <img
                 src={copied ? tickImg : copyImg}
                 alt={copied ? "tick_icon" : "copy_icon"}
-                className='h-[80%] w-[80%] object-contain'
+                className='copy_btn_img'
               />
             </div> }
           </div>
-            <div className="mt-2 border-t border-gray-300"></div>  
+            <div className="home_divider"></div>  
         </div>
-        <div className="mt-[20px] h-[calc(100%-60px)] overflow-y-auto scrollable">
+        <div className="email_content">
           {isGenerated ? emailContent : emailContentDummy}
         </div>
       </div>

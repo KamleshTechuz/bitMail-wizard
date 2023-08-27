@@ -1,10 +1,12 @@
-export const vocLevel = [
+import { listData } from "./interface";
+
+export const vocLevel: listData[] = [
   { id: 1, name: "Simple" },
   { id: 2, name: "Moderate" },
   { id: 3, name: "Complex" },
 ];
 
-export const vocType = [
+export const vocType: listData[] = [
   { id: 1, name: "Academic" },
   { id: 2, name: "Business" },
   { id: 3, name: "Legal" },
@@ -13,7 +15,7 @@ export const vocType = [
   { id: 6, name: "Technical" },
 ];
 
-export const emailContentDummy = `Welcome to BitMail-Wizard - Your AI Email Generator 📧
+export const emailContentDummy: string = `Welcome to BitMail-Wizard - Your AI Email Generator 📧
 
 Generating personalized emails for you...
 
@@ -21,7 +23,7 @@ Our AI is crafting the perfect message for your needs. Whether it's a business p
 
 Sit tight while we work our magic! ✨`;
 
-export const defaultPrompt = `write an email which fulfill the requirements mentioned below
+export const defaultPrompt: string = `write an email which fulfill the requirements mentioned below
 
 subject: <subject>
 <otherDetails>

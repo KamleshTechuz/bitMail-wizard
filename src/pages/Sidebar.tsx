@@ -18,8 +18,8 @@ const Sidebar = () => {
   }
 
   return (
-    <aside className="w-full lg:w-2/5 min-h-[570px] bg-white p-4 rounded-lg shadow-md">
-      <div className="flex gap-4">
+    <aside className="sidebar_container">
+      <div className="sidebar_div1">
         <div className="w-1/3 my-2">
           <StyledInput label="Word Limit" placeholder="Ex. 100" isRequired={true} target="wordLimit" />
         </div>
@@ -27,7 +27,7 @@ const Sidebar = () => {
           <StyledInput label="Working Area" placeholder="Ex. Office, School, University..." isRequired={true} target="workingArea" />
         </div>
       </div>
-      <div className="w-full flex gap-4">
+      <div className="sidebar_div2">
         <div className="w-full my-2">
           <StyledDropdown listData={vocLevel} label="Vocabulary Level" isRequired={true} target="vocabularyLevel" />
         </div>
@@ -47,13 +47,3 @@ const Sidebar = () => {
 };
 
 export default Sidebar;
-
-// write an email in official way which fulfill the requirements mentioned below
-
-// subject: Leaves of 3 days for brother's wedding
-
-// details: i want to take 3 days leaves for my brothers wedding.
-
-// word limit: 150
-
-// my working area: office

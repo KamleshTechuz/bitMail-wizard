@@ -1,11 +1,12 @@
 import { useContext } from "react";
 import { StyledInputLabel } from ".";
 import { EmailContext } from "../hooks/EmailContext";
+import { styledTextArea } from "../lib/interface";
 
-const StyledTextArea = ({ label, placeholder, isRequired, target, rows, maxLength }: any) => {
+const StyledTextArea = ({ label, placeholder, isRequired, target, rows, maxLength }: styledTextArea) => {
   const { myStates, setMyStates } = useContext(EmailContext);
 
-  const onHandleChange = (event: any) => {
+  const onHandleChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
     setMyStates((pre) => ({ ...pre, [event.target.name]: event.target.value }));
   };
 
@@ -20,7 +21,7 @@ const StyledTextArea = ({ label, placeholder, isRequired, target, rows, maxLengt
         id={target}
         name={target}
         placeholder={placeholder}
-        className="w-full my-2 px-4 py-2 resize-none border rounded-md focus:outline-none focus:border-[#0dceda]"
+        className="styled_textarea"
       ></textarea>
     </>
   );

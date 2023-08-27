@@ -1,11 +1,12 @@
 import { useContext } from "react";
 import { StyledInputLabel } from ".";
 import { EmailContext } from "../hooks/EmailContext";
+import { styledInput } from "../lib/interface";
 
-const StyledInput = ({ label, placeholder, isRequired, target }: any) => {
+const StyledInput = ({ label, placeholder, isRequired, target }: styledInput) => {
   const { myStates, setMyStates } = useContext(EmailContext);
 
-  const onHandleChange = (event: any) => {
+  const onHandleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setMyStates(pre => ({ ...pre, [event.target.name]: event.target.value }));
   };
 
@@ -19,7 +20,7 @@ const StyledInput = ({ label, placeholder, isRequired, target }: any) => {
         id={target}
         name={target}
         placeholder={placeholder}
-        className="w-full my-2 px-4 py-2 border rounded-md focus:outline-none focus:border-[#0dceda]"
+        className="styled_input"
       />
     </>
   );

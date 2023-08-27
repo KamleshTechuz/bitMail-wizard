@@ -1,4 +1,5 @@
 import { defaultPrompt } from "../lib";
+import { MyStateType } from "../lib/interface";
 
 const environment = {
   API_URL: "https://api.openai.com/v1/chat/completions",
@@ -49,7 +50,7 @@ export const processMsgToChatGTP = async (userPrompt: string) => {
 };
 
 
-export const checkValidation = (formData: any) => {
+export const checkValidation = (formData: MyStateType) => {
   let isError = false;
   Object.keys(formData).map((key) => {
     if (formData[key] === "" && !['isLoading', 'otherDetails', 'isGenerated', 'emailContent'].includes(key)) {

@@ -1,11 +1,12 @@
 import { useContext } from "react";
 import { StyledInputLabel } from ".";
 import { EmailContext } from "../hooks/EmailContext";
+import { listData, styledDropdown } from "../lib/interface";
 
-const StyledDropdown = ({ listData, label, isRequired, target }: any) => {
+const StyledDropdown = ({ listData, label, isRequired, target }: styledDropdown) => {
   const { myStates, setMyStates } = useContext(EmailContext);
 
-  const onHandleChange = (event: any) => {
+  const onHandleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setMyStates((pre) => ({ ...pre, [event.target.name]: event.target.value }));
   };
 
@@ -17,9 +18,9 @@ const StyledDropdown = ({ listData, label, isRequired, target }: any) => {
         value={myStates[target] as string}
         onChange={onHandleChange}
         name={target}
-        className="w-full my-2 px-4 py-2 border rounded-md bg-white text-gray-800 focus:outline-none focus:border-[#0dceda]"
+        className="styled_dropdown"
       >
-        {listData.map((opt: any) => (
+        {listData.map((opt: listData) => (
           <option key={opt.id} value={opt.name}>
             {opt.name}
           </option>

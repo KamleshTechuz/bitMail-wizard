@@ -3,7 +3,6 @@ import { EmailContext } from "../hooks/EmailContext";
 import { checkValidation } from "../services";
 
 const GenearteButton = ({ onClick }: any) => {
-
   const { myStates } = useContext(EmailContext);
 
   const currentClasses = myStates.isGenerated
@@ -18,7 +17,7 @@ const GenearteButton = ({ onClick }: any) => {
       }
       onClick={!checkValidation(myStates) ? onClick : undefined}
     >
-      <span className="flex justify-center items-center">
+      <span className="generate_btn_span">
         {/* <img src={stars} className="mr-2" /> */}
         {!myStates.isGenerated ? "Generate" : "Regenerate"}
       </span>
